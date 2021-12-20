@@ -1,0 +1,8 @@
+.header-content-warper {
+  min-height: calc(100vh - 56px);
+}
+
+.footer {
+  background-color: #e4e4e4;
+  height: 56px;
+}

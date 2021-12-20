@@ -1,0 +1,23 @@
+<h1>As notícias da Bahia</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Data</th>            
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each users}}
+        <tr>
+            <th scope="row">{{@index}}</th>
+            <td>{{this.titulo}}</td>
+            <td>{{this.categoria}}</td>
+            <td>{{ this.data}}</td>
+           
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

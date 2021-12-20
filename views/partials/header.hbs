@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <div class="container">
+    <a class="navbar-brand" href="/">NOTÍCIAS RECÔNCAVO</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+    data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        {{#if session.isAuth}}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Editar
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/users/update-profile">Perfil</a></li>
+            <li><a class="dropdown-item" href="/users/update-password">Senha</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/users/cad-noticia">Cadastrar Noticias</a>
+        </li>
+        {{else}}
+        <li class="nav-item">
+          <a class="nav-link" href="/users/registration">Registro</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/users/login">Login</a>
+        </li>
+        {{/if}}
+      </ul>
+      {{#if session.isAuth}}
+      <span class="navbar-text">
+        Olá, {{session.user.name}} | <a href="/users/logout">Logout</a>
+      </span>
+      {{/if}}
+    </div>
+  </div>
+</nav>

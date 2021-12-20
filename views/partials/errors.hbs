@@ -1,0 +1,9 @@
+{{#if errors}}
+<div class="mb-3 alert alert-danger" id="errorSection">
+    <ul>
+        {{#each errors}}
+        <li>{{this.msg}}</li>
+        {{/each}}
+    </ul>
+</div>
+{{/if}}

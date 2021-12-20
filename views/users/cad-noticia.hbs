@@ -1,0 +1,48 @@
+
+
+        <form class="row g-3" method="POST" action="/users/cad_noticia">
+        
+        {{> errors}}
+         <div class="col-md-6">
+                    <label for="inputName">Nome do autor</label>
+                    <input type="text" value="{{user.autor}}" name="autor" id="inputName" class="form-control" placeholder="Nome" required>
+          </div>
+
+          <div class="col-md-6">
+            <label for="exampleFormControlInput1" class="form-label">Email do autor</label>
+            <input type="email" class="form-control" value="{{user.email}}"  name="email" id="exampleFormControlInput1" placeholder="name@example.com">
+          </div>
+
+        <div class="col-md-6">
+                    <label for="inputState" class="form-label">Categoria</label>
+                    <select id="inputState"  class="form-select" value="{{user.categoria}}"  name="categoria">
+                   <option  value="1">Cultura e entretenimento</option>
+                  <option value="2">Ciência e tecnologia</option>
+                   <option value="3">Controvérsias</option>
+                    <option value="4">Crime, Direito e Justiça</option>
+                    <option value="5">Desastres e acidentes</option>
+                    <option value="6">Educação</option>
+                    <option value="7">Saúde e Ciência</option>
+                      <option value="8">Espiritualidade e Religião</option>
+                  </select>
+          </div>
+
+          <div class="col-md-6">
+                   <label for="inputName">Título da matéria</label>
+                    <input type="text" value="{{user.titulo}}" name="titulo" id="inputName" class="form-control"  required>
+          </div>
+
+
+
+        <div class="mb-12">
+          <label for="exampleFormControlTextarea1" class="form-label">Digite sua notícia completa</label>
+          <textarea class="form-control" value="{{user.noticia}}" name="noticia" id="exampleFormControlTextarea1" rows="6"></textarea>
+        </div>
+
+           <div class="col-12">
+                <button type="submit" class="btn btn-primary">Enviar Notícia</button>
+            </div>
+        </form>
+
+
+
