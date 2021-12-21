@@ -1,23 +1,11 @@
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcrypt');
-
 const UserModel = require('../models/user');
-//const UserModel1 = require('../models/noticia');
 const states = require('../utils/states');
 const mailSender = require('../utils/mail-sender');
 
-exports.listUsers = async (req, res) => {
-    const users = await UserModel.find({}).lean();
-    res.render('users/list');
-}
 
-/* caddro de noticias 
-exports.renderCadnoticia = (req, res) => {
-    res.render('users/cad-noticia', {
-        states,
-        user: {}
-    });
-}*/
+
 
 exports.renderRegistration = (req, res) => {
     res.render('users/registration', {

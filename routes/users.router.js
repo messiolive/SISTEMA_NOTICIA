@@ -51,8 +51,9 @@ const generalInfoValidator = () => {
 }
 
 // rotas
+router.post( '/cad-noticia',usersCtrl1.register);
 router.get('/cad-noticia', usersCtrl1.renderCadnoticia);
-router.get('/list', usersCtrl.listUsers);
+router.get('/list', usersCtrl1.listUsers);
 router.get('/registration', usersCtrl.renderRegistration);
 
 router.post('/registration', [

@@ -1,7 +1,7 @@
 const express = require('express');
 
 const security = require('../utils/security');
-
+const usersCtrl1 = require('../controllers/not.controller');
 const router = express.Router();
 
 /* GET home page. */
